@@ -1,15 +1,13 @@
-// ========================
 // Classe Question
-// ========================
 class Question {
     constructor(enonce, reponses, reponseCorrecte) {
         this.enonce = enonce;
         this.reponses = reponses;
-        this.reponseCorrecte = reponseCorrecte; // index de la bonne réponse
+        this.reponseCorrecte = reponseCorrecte;
     }
 
     afficher() {
-        // On crée une div qui contiendra la question + les choix
+        // Div pour les questions et choix
         const container = document.createElement("div");
 
         // Titre / énoncé
@@ -37,9 +35,7 @@ class Question {
     }
 }
 
-// ========================
 // Classe Quiz
-// ========================
 class Quiz {
     constructor() {
         this.questions = [];
@@ -54,20 +50,17 @@ class Quiz {
     }
 
     afficherQuestion(question) {
-        // On vide la zone d'affichage
         this.zoneQuiz.innerHTML = "";
-
-        // On ajoute le HTML généré par Question.afficher()
         this.zoneQuiz.appendChild(question.afficher());
     }
 
     collecterReponse() {
-        // On récupère le bouton radio sélectionné
+        // Récupère le bouton radio sélectionné
         const selection = document.querySelector('input[name="reponse"]:checked');
 
         // Si rien n'est sélectionné, on stoppe et on prévient
         if (!selection) {
-            alert("Choisis une réponse avant de valider 🙂");
+            alert("Choisis une réponse avant de valider");
             return;
         }
 
@@ -119,9 +112,7 @@ class Quiz {
     }
 }
 
-// ========================
 // Création du quiz + questions (Module 2)
-// ========================
 const quiz = new Quiz();
 
 quiz.ajouterQuestion(
@@ -204,7 +195,7 @@ quiz.ajouterQuestion(
     )
 );
 
-// On affiche la première question
+// Affichage de la première question
 quiz.afficherQuestion(quiz.questions[0]);
 
 // Quand on clique sur "Valider la réponse"
