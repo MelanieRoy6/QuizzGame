@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title */
+h1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Bloc du quiz */
+#quiz {
+    background-color: white;
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Question */
+#quiz h2 {
+    margin-bottom: 20px;
+}
+
+/* Réponses */
+label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Bouton */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Effet au survol */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Bouton désactivé */
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
